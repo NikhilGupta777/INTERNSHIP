@@ -1,0 +1,3 @@
+  DAY 1
+
+// in day 1 we studied too any things from basics of c and c++ to some intemediate questions to solve within some seconds or minutes!
