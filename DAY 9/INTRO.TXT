@@ -1,0 +1,13 @@
+Bitbucket-github-gitlab
+
+1) domain name - mohit.com(to purchase ony 500,100 needed)
+2) space - upload all your webpages into this space 
+3) we can have our won website free of cose frim github
+    code: html javascript - 7 pages  - 50 mb3e4n
+
+
+-----------------------------------
+
+// In set the thing is that if you input same integers or elements more times then 
+// it does not count the repeated elements and only thakes it once
+// also it automatically makes the set in the sorted manner!
