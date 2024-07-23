@@ -1,0 +1,111 @@
+USED TO DEFINE THE SCOPE(VISIBILITY) AND LIFETIME OF A VARIABLE OR VARIABLES AND OR FUNCTINS WITHIN A C++ PROGRAM
+
+THE MAJOR STORAGE CLASSES IN C++ ARE: 
+
+AUTO
+KI
+STATIC
+EXTERN
+MUTABLE
+
+--------------------------------------
+
+1) Auto:-
+
+Scope: Local to the block in which it is defined.
+
+Lifetime: Automatically destroyed when the block is exited.
+
+Notes: This keyword is rarely used in modern C++ as it has been repurpose- in C++11 to deduce/gather the type of the variable from its initializer.
+
+void example() [
+
+auto x 10; // x is automatically assume to be of type int
+
+
+
+
+2) register:
+
+Scope: Local to the block in which it is defined.
+
+Lifetime: Automatically destroyed when the block is exited.
+
+Notes: Suggests to the compiler to store the variable in a CPU register for faster access. Modern compilers often ignore this hint.
+
+Example for register
+
+void example() [ register int counter = 0; for (register int i = 0; i < 10; ++i) { counter += i; }
+
+
+
+
+3) static:
+
+Scope: For variables within a function: Local to the function but retains its value between function calls.
+
+For variables within a file: File scope, visible only within the file.
+
+Lifetime: Exists for the duration of the program.
+
+Notes: Can also be used with member functions and data members in classes to indicate that the member is shared among all instances of the class.
+
+Example for static:
+
+void example() [
+
+static int count = 0;
+
+count++;
+
+std::cout << "Count: " << count << std::endl;
+
+--------------------example-2
+
+static int globalVar = 0; // Visible only within this file
+
+void example() [
+
+globalVar++;}
+
+
+
+
+[4] extern:
+
+Scope: Global, the variable or function is visible across multiple files.
+
+Lifetime: Exists for the duration of the program.
+
+Notes: Used to declare a variable or function that is defined in another file.
+
+// File1.cpp int globalVar = 0;
+
+// File2.cpp extern int globalVar; 
+
+void example() 
+{
+    globalVar++;
+}
+
+
+
+
+[5] mutable:
+
+Scope: Used in classes.
+
+Lifetime: As per the containing object.
+
+Notes: Allows a member of an object to be modified even if the object is declared as const.
+
+class Example { 
+    Mutable()
+    {
+    }
+    Mutable(int val) : value(val) {}
+
+    void modify() const { value++; }
+}
+
+Summary: Each storage class has its specific use cases and helps in optimizing the program's performance and manageability.
