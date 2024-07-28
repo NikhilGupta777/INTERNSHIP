@@ -1,0 +1,136 @@
+
+
+
+                            [STRUCTURE AND UNION]
+
+
+
+► In C++, both structures and unions are user-defined data types that allow you to store multiple variables of different types under a single name.
+
+► However, they differ in how they store data and their typical use cases.
+
+► A structure (struct) in C++ is a collection of variables (of different types) grouped together under a single name.
+
+► Each variable in the structure is called a member.
+
+
+
+
+
+                            [ EXAMPLE PROGRAM : ]
+
+                            
+
+#include <iostream>
+
+#include <string>
+
+// Define a structure to represent a person
+
+struct Person {
+
+std::string name;
+
+int age;
+
+float height;
+
+};
+
+int main() {
+
+// Create an instance of the structure and initialize members Person person1; person1.name "Sojan";
+
+person1.age 30;
+
+person1.height = 5.5;
+
+// Output the structure members
+
+std::cout << "Name: " << person1.name << std::endl;
+
+std::cout << "Age:"<<< person1.age << std::endl; std::cout << "Height: " << person1.height << std::endl;
+
+return 0;
+}
+
+
+
+                        [STRUCTURE IN C++]
+
+A structure in C ++  that it can hold multiple data members.
+
+All members of a structure have different memory locations for them 
+
+The member of the Structure can be accessed simultaneously and at the same time whereas in union the member can be accessed only one at 
+a time
+
+the size of structure is equal tot he size of the largest member of the structure
+
+
+
+                        [UNIONS IN C++]
+
+
+A union in C ++ is similar to a structure in that it can hold multiple data members.
+
+However, all members of a union share the same memory location, which means only one member can contain a value at any given time.
+
+
+
+
+
+
+
+
+
+                        [COMPARISON]
+
+
+Comparing Structures and Unions:
+-------------------------------
+
+
+----------------------------------------------------------------------------------------------------------------------
+| Feature            Structure                                                Union                                   |
+----------------------------------------------------------------------------------------------------------------------
+|                                                                                                                     |
+| Memory             Each member has its own memory                           All members share the same memory       |
+|                                                                                                                     |
+|                                                                                                                     |
+| Size               Sum of sizes of all members                              Size of the largest member              |
+|                                                                                                                     |  
+|                                                                                                                     |
+| Usage              Can hold multiple members at a time                      Can hold only one member at a time      |
+|                                                                                                                     |
+|                                                                                                                     |--
+| Access             Safe to access any member at any time                    Safe to access only the last written member|
+|                                                                                                                     |--
+|                                                                                                                     |
+| Initialization     Can initialize multiple members simultaneously           Can initialize only one member at a time|
+|----------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                        [WHEN TO USE STRUCTURE AND UNION]
+
+
+► Structures: Use structures when you need to group different variables and maintain their individual values simultaneously.
+
+For example, when defining a record for a person or a complex data type.
+
+► Unions: Use unions when you need to store different data types in the same memory location, but never need to use more than one at a time.
+
+This can be useful for conserving memory in embedded systems or implementing polymorphic data structures.
